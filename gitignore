@@ -1,0 +1,8 @@
+# contracts
+contracts/node_modules/
+contracts/artifacts/
+contracts/cache/
+contracts/.env
+
+# macOS
+.DS_Store
