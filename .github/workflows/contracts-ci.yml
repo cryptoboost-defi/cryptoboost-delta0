@@ -7,19 +7,22 @@ on:
     branches: ["main"]
     paths: ["contracts/**", ".github/workflows/contracts-ci.yml"]
 
-# spriječi gomilanje starih runova na istoj grani
 concurrency:
   group: contracts-ci-${{ github.ref }}
   cancel-in-progress: true
+
+permissions:
+  contents: read
 
 jobs:
   test:
     name: Node ${{ matrix.node }}
     runs-on: ubuntu-latest
+    timeout-minutes: 20
     strategy:
       fail-fast: false
       matrix:
-        node: [18, 20] # testiraj na Node 18 i 20
+        node: [18, 20]
     defaults:
       run:
         working-directory: contracts
@@ -33,10 +36,13 @@ jobs:
         with:
           node-version: ${{ matrix.node }}
           cache: npm
-          cache-dependency-path: contracts/package-lock.json
+          # Fallback cache i bez lockfile-a
+          cache-dependency-path: |
+            contracts/package-lock.json
+            contracts/package.json
 
       - name: Install
-        run: npm ci
+        run: npm install
 
       - name: Compile
         run: npx hardhat compile
@@ -53,3 +59,4 @@ jobs:
             contracts/artifacts
             contracts/cache/solidity-files-cache.json
             contracts/test-output-node-${{ matrix.node }}.log
+          retention-days: 7
