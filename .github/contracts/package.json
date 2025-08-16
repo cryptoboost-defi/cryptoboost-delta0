@@ -1,0 +1,12 @@
+{
+  "name": "contracts",
+  "version": "1.0.0",
+  "description": "CryptoBoost Δ0 – contracts",
+  "scripts": { "test": "npx hardhat test" },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-toolbox": "^6.1.0",
+    "dotenv": "^17.2.1",
+    "hardhat": "^2.26.3"
+  },
+  "dependencies": { "@openzeppelin/contracts": "^5.4.0" }
+}
