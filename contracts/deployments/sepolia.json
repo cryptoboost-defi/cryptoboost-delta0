@@ -1,0 +1,6 @@
+{
+  "network": "sepolia",
+  "deployer": "0x16Fdb05c91058C087A0319230902F69B2B584088",
+  "MockStable": "0x2EFf3e2602b7b6116a6aA73C640f944FA7B44485",
+  "Delta0Staking": "0xB27b5f9a7e9Bc82bB11febe8A84897AaAcc48c53"
+}
