@@ -50,7 +50,7 @@ jobs:
           key: ${{ runner.os }}-solc-cache-${{ matrix.node }}-v1
 
       - name: Install
-        run: npm install
+        run: npm ci
 
       # Retry x3 zbog povremenih timeouta pri preuzimanju solc-a
       - name: Compile (retry)
