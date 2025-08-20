@@ -6,3 +6,9 @@ contracts/.env
 
 # macOS
 .DS_Store
+
+# helper
+repo-info*.txt
+# helper (repo snapshot)
+repo-info*.txt
+repo-snapshot-*.txt
