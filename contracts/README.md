@@ -2,6 +2,9 @@
 
 Hardhat workspace with smart contracts, config and tests for the CryptoBoost Δ0 project.
 
+[![contracts-ci](https://github.com/cryptoboost-defi/cryptoboost-delta0/actions/workflows/contracts-ci.yml/badge.svg)](https://github.com/cryptoboost-defi/cryptoboost-delta0/actions/workflows/contracts-ci.yml)
+[![deploy-sepolia](https://github.com/cryptoboost-defi/cryptoboost-delta0/actions/workflows/deploy-sepolia.yml/badge.svg)](https://github.com/cryptoboost-defi/cryptoboost-delta0/actions/workflows/deploy-sepolia.yml)
+
 ---
 
 ## 📂 Structure
@@ -18,7 +21,7 @@ Hardhat workspace with smart contracts, config and tests for the CryptoBoost Δ0
 # compile & test from the repo root
 npx --prefix contracts hardhat compile
 npx --prefix contracts hardhat test
-````
+```
 
 ---
 
