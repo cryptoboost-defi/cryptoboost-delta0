@@ -1,0 +1,20 @@
+version: 2
+updates:
+  # GitHub Actions u rootu
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels: ["dependencies"]
+    open-pull-requests-limit: 10
+
+  # npm za Hardhat paket u /contracts
+  - package-ecosystem: "npm"
+    directory: "/contracts"
+    schedule:
+      interval: "weekly"
+      day: "monday"
+    labels: ["dependencies"]
+    open-pull-requests-limit: 10
+    versioning-strategy: increase
