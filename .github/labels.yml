@@ -1,0 +1,50 @@
+# Standard labels for CryptoBoost Δ0
+- name: bug
+  color: d73a4a
+  description: Something isn't working
+  aliases: [Bug, defects]
+
+- name: feature
+  color: a2eeef
+  description: New feature or enhancement
+  aliases: [enhancement]
+
+- name: ai-task
+  color: 5319e7
+  description: Structured task for Copilot/Agents
+
+- name: dependencies
+  color: 0366d6
+  description: Bumps from Dependabot
+
+- name: ci
+  color: 0e8a16
+  description: CI / build changes
+
+- name: contracts
+  color: 1d76db
+  description: Smart contracts work
+
+- name: security
+  color: b60205
+  description: Security-related change
+
+- name: priority: high
+  color: b60205
+  description: Must do asap
+
+- name: priority: medium
+  color: d93f0b
+  description: Important but not urgent
+
+- name: priority: low
+  color: cccccc
+  description: Nice to have
+
+- name: good first issue
+  color: 7057ff
+  description: Good for newcomers
+
+- name: help wanted
+  color: 008672
+  description: Extra attention is needed
