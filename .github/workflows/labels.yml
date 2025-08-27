@@ -1,0 +1,21 @@
+name: sync-labels
+on:
+  push:
+    paths: [".github/labels.yml", ".github/workflows/labels.yml"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: write
+  administration: write
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Sync labels
+        uses: crazy-max/ghaction-github-labeler@v5
+        with:
+          skip-delete: true
+          yaml-file: .github/labels.yml
